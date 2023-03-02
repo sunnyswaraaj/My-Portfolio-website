@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio website</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="style1.css"> </head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo3.PNG" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                    <i class='bx bx-chevrons-right' onclick="closemenu()"></i>
+
+                    </i>
+                </ul>
+                <i class='bx bx-menu' onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text ">
+                <p>Front-end Developer!</p>
+                <h1>Hi, I'm
+                    <span>Sunny Kumar</span></h1><br>
+                <p>Welcome to my personal website !</p>
+            </div>
+        </div>
+    </div>
+
+    <!---------------------About------------------------------->
+    <div id="about">
+        <div class="container">
+
+            <div class="row ">
+                <div class="about-col-1 ">
+                    <img src="about2.jpg" </div>
+                </div>
+                <div class="about-col-2 ">
+
+                    <h1 class="sub-title">About Me
+                    </h1>
+                    <p>I am a Front-end Developer with a passion for building creative and innovative website.I have experience in a variety of programming languages,including C,C++,Python,java and javaScript.</p>
+                    <div class="tab-title">
+                        <p class="tab-link active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-link" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-link" onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Front-end Development</span><br>Designing web interfaces</li>
+                            <li> <span>Web Development</span><br>Developing full website</li>
+                        </ul>
+
+
+
+                    </div>
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>Fresher</span><br>Fresher</li>
+
+                        </ul>
+
+
+
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>2023</span><br>BCA from VIBRM Muzaffarpur</li>
+                            <li> <span>2019</span><br>ISC from BSEB Patna</li>
+                            <li> <span>2017</span><br>Matric from BSEB Patna</li>
+                        </ul>
+
+
+
+                    </div>
+                </div>
+            </div>
+            <!-------------------------Contact--------------------------------------->
+            <div id="contact">
+                <div class="container ">
+                    <div class="row ">
+                        <div class="contact-left ">
+
+                            <h1 class="sub-title ">Contact Me</h1>
+                            <p>If you would like to get in touch with me, please send an email or messages</p>
+                            <p>
+                                <a href=" "><i class='bx bxs-envelope'></i>Email <br>sunnyraaz2015@gmail.com</a>
+                            </p>
+                            <p>
+                                <a><i class='bx bxs-map'></i>Address<br>
+                                    Motihari,Bihar,India.
+                                </a>
+                            </p>
+                            <p>
+                                <a href="https://wa.me/qr/OCVFEBA6QYZTN1"> <i class='bx bxl-whatsapp'></i>+916206195055 </a>
+                            </p>
+                            <div class="social-icons ">
+
+                                <a href="https://www.facebook.com/profile.php?id=100008638170981&mibextid=ZbWKwL "><i class='bx bxl-facebook-circle'></i></a>
+                                <a href="https://www.instagram.com/invites/contact/?i=7w62g5gsicjo&utm_content=27vffub "><i class='bx bxl-instagram'></i></a>
+                                <a href=" ">
+                                    <i class='bx bxl-twitter'></i></a>
+                                <a href=" https://www.linkedin.com/public-profile/settings?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_contact-info%3B8R8%2FPjB2RJSFn2ZLv3%2FaGg%3D%3D "><i class='bx bxl-linkedin-square'></i></a>
+                                <a href="https://github.com/sunnyswaraaj"><i class='bx bxl-github'></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="contact-right ">
+
+                            <form action="connect.php" method="post">
+                                <input type="text" name="name" placeholder="Your Name" required>
+                                <input type="email" name="email" placeholder="Your Email " required>
+                                <textarea name="message" rows="6 " placeholder="Your Messages "></textarea>
+                                <button type="submit " class="btn ">Submit</button> </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="copyright ">
+                <p>©Developed by Sunny.<i class='bx bxs-heart'></i>2023</p>
+            </div>
+
+            <script>
+                var tablink = document.getElementsByClassName("tab-link");
+                var tabcontents = document.getElementsByClassName("tab-contents");
+
+                function opentab(tabname) {
+                    for (let x of tablink) {
+                        x.classList.remove("active-link");
+                    }
+                    for (let tabcontent of tabcontents) {
+                        tabcontent.classList.remove("active-tab");
+                    }
+                    event.currentTarget.classList.add("active-link");
+                    document.getElementById(tabname).classList.add("active-tab");
+                }
+            </script>
+            <script>
+                var sidemnu = document.getElementById("sidemenu");
+
+                function openmenu() {
+                    sidemnu.style.right = "0 ";
+
+                }
+
+                function closemenu() {
+                    sidemnu.style.right = "-200px ";
+
+                }
+            </script>
+</body>
+
+</html>
